@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var userInput = Number(Math.ceil(prompt("Enter a Decimal Point value.","i.e 3.4")));
+
+        alert(`Your entered number is now ${userInput}`);
+
+        var myText = "This is my dummy text";
+
+        alert(`Dummy text: "${myText}"`);
+
+        var text = myText.slice(0,userInput);
+
+        text = text.split("");
+
+        var textRev = "";
+        
+        for (var i = text.length - 1; i >= 0; i--) {
+            textRev +=  text[i];
+            
+        }
+        alert(`"${text.join("")}"`);
+        alert(`"${textRev}"`);
+   
+    </script>
+</body>
+</html>
