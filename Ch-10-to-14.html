@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var num1 = Number(prompt("Please enter your first number"));
+        var operator = prompt("Please enter the operator");
+        var num2 = Number(prompt("Please enter your second number"));
+
+        if(operator === "+"){
+            var sum = num1 + num2;
+            alert("sum = " + sum);
+        }else if(operator === "-"){
+            var minus = num1 - num2;
+            alert ("minus = " + minus);
+        }else if(operator === "/"){
+            var division = num1 / num2;
+            alert ("division = " + division);
+        }else if(operator === "*"){
+            var product = num1 * num2;
+            alert ("product = " + product);
+        }else if(operator === "%"){
+            var modulus = num1 % num2;
+            alert ("modulus = " + modulus);
+        }else{
+            alert("Please fill the boxes properly");
+        }
+
+
+    </script>
+</body>
+</html>

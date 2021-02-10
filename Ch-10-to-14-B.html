@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        var maths = prompt("Enter marks obtained in Maths? out of 100");
+        var english = prompt("Enter marks obtained in English? out of 100");
+        var physics = prompt("Enter marks obtained in Physics? out of 100");
+        var urdu = prompt("Enter marks obtained in Urdu? out of 100");
+        var computer = prompt("Enter marks obtained  in Computer? out of 100");
+       // converting string into numbers
+        var maths = Number(maths);
+        var english = Number(english);
+        var physics = Number(physics);
+        var urdu = Number(urdu);
+        var computer = Number(computer);
+	var totMarks = 500;
+        // Calculating result
+        var total = maths+english+physics+urdu+computer; 
+        var result = (total / totMarks) * 100; 
+        var totalMarks = alert("Marks Obtained = " + total + " Out of 500");
+        var result = alert("Your Persentage = " + result + "%");
+   
+    </script>
+</body>
+</html>

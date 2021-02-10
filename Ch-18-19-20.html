@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var courses = [];
+        var counter = ["First","Second","Third","Fourth","Fifth"]
+
+        for (var i = 0; i < 5; i++) {
+            courses.push(prompt(counter[i]+" Course"));
+        }
+        alert(courses);
+
+        for (var j = 0; j < courses.length; j++) {
+            courses[j] = prompt(counter[j]+" Course",courses[j]);
+            courses.splice(j,1,courses[j]);
+        }
+        alert("Modifyed values: " +courses)
+    
+    </script>
+</body>
+</html>
