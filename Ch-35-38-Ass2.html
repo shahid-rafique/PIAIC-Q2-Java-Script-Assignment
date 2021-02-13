@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function findFactorial(number){
+            var facorial = 1;
+            while(number !== 1 ){
+                facorial = number * facorial;
+                number--;
+            }
+            return facorial
+        }
+    
+        var userInput = Number(prompt("Enter a number"));
+        var result = findFactorial(userInput);
+        console.log(`Factorial of: ${userInput} is "${result}"`);
+        //You cal also print the same result as under:
+        console.log("Factorial of: " + userInput + " is " + result);
+        //Factorial of 5 is "120"
+        </script>
+</body>
+</html>5
