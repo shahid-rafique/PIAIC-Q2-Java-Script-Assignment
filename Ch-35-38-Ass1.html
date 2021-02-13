@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function capatalize(userInput){
+            var splitUserInput = inputValue.split(" ");
+            var sentence = "";
+            var space = " ";
+            for (var i = 0;  i< splitUserInput.length; i++) {
+                sentence += splitUserInput[i].charAt(0).toUpperCase() + splitUserInput[i].slice(1).toLowerCase() + space;   
+            }
+            return sentence
+        }
+        var inputValue = prompt("Enter a sentence that you want to capatalize first letter");
+        var result = capatalize(inputValue);
+        console.log(result);
+   
+        </script>
+
+</body>
+</html>
