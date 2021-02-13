@@ -7,103 +7,104 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <script>
-    var name = prompt("What is your name?","Muhammad Shahid Rafique");
-    var day = Number(prompt("Enter the day on which you born?","12"));
-    var month =Number(prompt("Enter the month on which you born?","06"));
-    var year = Number(prompt("Enter the year on which you born?","2000"));
-    var msg="";
-
-    var Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
-    var day = new Date();
-    var hr = day.getHours();
-        if (hr >= 0 && hr < 12) {
-            //document.write("Good Morning!");
-            msg="Good Morning!";
-        } else if (hr == 12) {
-            //document.write("Good Noon!");
-            msg="Good Noon!";
-        } else if (hr >= 12 && hr <= 17) {
-            //document.write("Good Afternoon!");
-            msg="Good Afternoon!";
-        } else {
-            //document.write("Good Evening!");
-            msg="Good Evening!";
+        var name = prompt("What is your name?","Muhammad Shahid Rafique");
+        var day = Number(prompt("Enter the day on which you born?","12"));
+        var month =Number(prompt("Enter the month on which you born?","06"));
+        var year = Number(prompt("Enter the year on which you born?","2000"));
+        var msg="";
+    
+        var Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+        var day1 = new Date();
+        var hr = day1.getHours();
+            if (hr >= 0 && hr < 12) {
+                //document.write("Good Morning!");
+                msg="Good Morning!";
+            } else if (hr == 12) {
+                //document.write("Good Noon!");
+                msg="Good Noon!";
+            } else if (hr >= 12 && hr <= 17) {
+                //document.write("Good Afternoon!");
+                msg="Good Afternoon!";
+            } else {
+                //document.write("Good Evening!");
+                msg="Good Evening!";
+            }
+    
+    
+        //console.log(msg);
+        console.log(`Hello ${name} ${msg}`);
+    
+        var yourDateOfBirth = new Date(`${Months[month-1]} ${day}, ${year}`);
+        console.log(`your DOB is ${yourDateOfBirth}`);
+    
+        var rightNow = new Date();
+    
+        var msdiff = rightNow.getTime() - yourDateOfBirth.getTime();
+    
+        var forTotalDays = Math.floor(msdiff / (1000 * 60 * 60 * 24));
+    
+        var forYear = Math.floor(msdiff / (1000 * 60 * 60 * 24 * 365));
+        msdiff = msdiff % (1000 * 60 * 60 * 24 * 365);
+    
+        var forMonth = Math.floor(msdiff / (1000 * 60 * 60 * 24 * 30)%12);
+        msdiff = msdiff % (1000 * 60 * 60 * 24 * 30);
+    
+        var forDays = Math.floor(msdiff / (1000 * 60 * 60 * 24));
+        msdiff = msdiff % (1000 * 60 * 60 * 24);
+    
+        var forHours = Math.floor(msdiff / (1000 * 60 * 60));
+        msdiff = msdiff % (1000 * 60 * 60);
+    
+        var forMin = Math.floor(msdiff / (1000 * 60));
+        msdiff = msdiff % (1000 * 60);
+    
+        var forSec = Math.floor(msdiff / (1000));
+        msdiff = msdiff % 1000;
+    
+        var millsec =msdiff;
+    
+        var nextBith = new Date("06 12, 2021"); // month day,year
+    
+        var msdiff2 =  nextBith-rightNow;
+    
+        var nextTotalDays = Math.floor(msdiff2 / (1000 * 60 * 60 * 24));
+    
+        var nextYear = Math.floor(msdiff2 / (1000 * 60 * 60 * 24 * 365));
+        msdiff2 = msdiff2 % (1000 * 60 * 60 * 24 * 365);
+    
+        var nextMonth = Math.floor(msdiff2 / (1000 * 60 * 60 * 24 *30)%12);
+        msdiff2 = msdiff2 % (1000 * 60 * 60 * 24 * 30);
+    
+        var nextDays = Math.floor(msdiff2 / (1000 * 60 * 60 * 24));
+        msdiff2 = msdiff2 % (1000 * 60 * 60 * 24);
+    
+        var nextHours = Math.floor(msdiff2 / (1000 * 60 * 60));
+        msdiff2 = msdiff2 % (1000 * 60 * 60);
+    
+        var nextMin = Math.floor(msdiff2 / (1000 * 60));
+        msdiff2 = msdiff2 % (1000 * 60);
+    
+        var nextSec = Math.floor(msdiff2 / (1000));
+        msdiff2 = msdiff2 % (1000);
+    
+        var nextMillsec = msdiff2;
+    
+        //Your age
+        console.log(`${name}, You are ${forYear} years ${forMonth} months ${forDays} Days ${forHours} Hours ${forMin} Minutes ${forSec} Seconds and ${millsec} milliseccond old`);
+    
+        //Your age in days 
+        console.log(`your age in days ${forTotalDays}`);
+    
+        //Days left in your next birthday
+        if (rightNow.getFullYear() == 2021 && rightNow.getMonth() == 06 && rightNow.getDate() == 12) {
+          console.log(`Happy Birthday ${name}.God Bless You ${name}`)
+        }else{
+          console.log(`How much time left in your next Birthday? ${nextMonth} months ${nextDays} days ${nextHours} hours ${nextMin} minutes ${nextSec} sec ${nextMillsec} milliseconds`);
+    
         }
+    </script>  
 
-
-    //console.log(msg);
-    console.log(`Hello ${name} ${msg}`);
-
-    var yourDateOfBirth = new Date(`${Months[month-1]} ${day}, ${year}`);
-    console.log(`your DOB is ${yourDateOfBirth}`);
-
-    var rightNow = new Date();
-
-    var msdiff = rightNow.getTime() - yourDateOfBirth.getTime();
-
-    var forTotalDays = Math.floor(msdiff / (1000 * 60 * 60 * 24));
-
-    var forYear = Math.floor(msdiff / (1000 * 60 * 60 * 24 * 365));
-    msdiff = msdiff % (1000 * 60 * 60 * 24 * 365);
-
-    var forMonth = Math.floor(msdiff / (1000 * 60 * 60 * 24 * 30)%12);
-    msdiff = msdiff % (1000 * 60 * 60 * 24 * 30);
-
-    var forDays = Math.floor(msdiff / (1000 * 60 * 60 * 24));
-    msdiff = msdiff % (1000 * 60 * 60 * 24);
-
-    var forHours = Math.floor(msdiff / (1000 * 60 * 60));
-    msdiff = msdiff % (1000 * 60 * 60);
-
-    var forMin = Math.floor(msdiff / (1000 * 60));
-    msdiff = msdiff % (1000 * 60);
-
-    var forSec = Math.floor(msdiff / (1000));
-    msdiff = msdiff % 1000;
-
-    var millsec =msdiff;
-
-    var nextBith = new Date("06 12, 2021"); // month day,year
-
-    var msdiff2 =  nextBith-rightNow;
-
-    var nextTotalDays = Math.floor(msdiff2 / (1000 * 60 * 60 * 24));
-
-    var nextYear = Math.floor(msdiff2 / (1000 * 60 * 60 * 24 * 365));
-    msdiff2 = msdiff2 % (1000 * 60 * 60 * 24 * 365);
-
-    var nextMonth = Math.floor(msdiff2 / (1000 * 60 * 60 * 24 *30)%12);
-    msdiff2 = msdiff2 % (1000 * 60 * 60 * 24 * 30);
-
-    var nextDays = Math.floor(msdiff2 / (1000 * 60 * 60 * 24));
-    msdiff2 = msdiff2 % (1000 * 60 * 60 * 24);
-
-    var nextHours = Math.floor(msdiff2 / (1000 * 60 * 60));
-    msdiff2 = msdiff2 % (1000 * 60 * 60);
-
-    var nextMin = Math.floor(msdiff2 / (1000 * 60));
-    msdiff2 = msdiff2 % (1000 * 60);
-
-    var nextSec = Math.floor(msdiff2 / (1000));
-    msdiff2 = msdiff2 % (1000);
-
-    var nextMillsec = msdiff2;
-
-    //Your age
-    console.log(`${name}, You are ${forYear} years ${forMonth} months ${forDays} Days ${forHours} Hours ${forMin} Minutes ${forSec} Seconds and ${millsec} milliseccond old`);
-
-    //Your age in days 
-    console.log(`your age in days ${forTotalDays}`);
-
-    //Days left in your next birthday
-    if (rightNow.getFullYear() == 2021 && rightNow.getMonth() == 06 && rightNow.getDate() == 12) {
-      console.log(`Happy Birthday ${name}.God Bless You ${name}`)
-    }else{
-      console.log(`How much time left in your next Birthday? ${nextMonth} months ${nextDays} days ${nextHours} hours ${nextMin} minutes ${nextSec} sec ${nextMillsec} milliseconds`);
-
-    }
-</script>  
 </body>
 </html>
